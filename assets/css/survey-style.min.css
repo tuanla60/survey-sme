@@ -42537,6 +42537,9 @@ textarea:focus-visible {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
+.section-survey-info .item {
+  padding: 0 !important;
+}
 
 .btn-send.events--none {
   cursor: default !important;

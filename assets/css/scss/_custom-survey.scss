@@ -187,7 +187,16 @@
             box-shadow: none;
         }
     }
+    .item {
+        padding: 0 !important;
+    }
 }
+
+.survey_area .survey-wrapper .survey-inner .survey-inner__content .section-step .item {
+
+}
+
+
 
 .btn-send.events--none {
     cursor: default !important;
