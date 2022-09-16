@@ -28085,10 +28085,10 @@
 .ip-custom input[type="radio"] {
     position: absolute;
     left: 0;
-    top: 7px;
+    top: 6px;
     margin: 0;
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0)
@@ -28106,11 +28106,11 @@
     content: '';
     position: absolute;
     left: 0;
-    top: 7px;
-    width: 14px;
-    height: 14px;
+    top: 6px;
+    width: 18px;
+    height: 18px;
     background-color: #fff;
-    border: 1px solid #757575;
+    border: 2px solid #757575;
     display: inline-block;
     z-index: 1;
     border-radius: 100%
@@ -28119,8 +28119,8 @@
 .ip-custom input[type="radio"]+label::after {
     content: '';
     position: absolute;
-    left: 3px;
-    top: 10px;
+    left: 5px;
+    top: 11px;
     width: 8px;
     height: 8px;
     z-index: 2;
@@ -28134,7 +28134,7 @@
 }
 
 .ip-custom input[type="radio"]:checked+label::before {
-    border: 1px solid #2aa7dd
+    border-color: #2aa7dd
 }
 
 .ip-custom input[type="radio"]:disabled+label::before {
@@ -28145,10 +28145,10 @@
 .ip-custom input[type="checkbox"] {
     position: absolute;
     left: 0;
-    top: 7px;
+    top: 6px;
     margin: 0;
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0)
@@ -28166,9 +28166,9 @@
     content: '';
     position: absolute;
     left: 0;
-    top: 7px;
-    width: 14px;
-    height: 14px;
+    top: 6px;
+    width: 18px;
+    height: 18px;
     background-color: #fff;
     border: 2px solid #757575;
     border-radius: 3px;
@@ -28178,15 +28178,15 @@
 
 .ip-custom input[type="checkbox"]+label::after {
     content: '';
-	width: 14px;
-	height: 14px;
+	width: 18px;
+	height: 18px;
     position: absolute;
     left: 0;
-    top: 7px;
+    top: 6px;
     z-index: 2;
     display: none;
     font-size: 9px;
-    line-height: 14px;
+    line-height: 18px;
     color: #fff;
     border-radius: 0;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
@@ -28443,6 +28443,16 @@
 						&:hover {
 						    background-color: #e5e5e5
 						}
+					}
+
+					&.btn-send--sending {
+			    		color: #fff;
+					    background-color: #001937;
+				    	border-color: #001937;
+						// .loader::before,
+						// .loader::after {
+						//     background-color: var(--color)
+						// }
 					}
 
 
