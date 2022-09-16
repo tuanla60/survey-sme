@@ -1,0 +1,347 @@
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes "load" {
+    from {
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+@-webkit-keyframes "load" {
+    from {
+        -webkit-transform: translate(-50%,-50%) rotate(0deg);
+    }
+    to {
+        -webkit-transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+.load {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9999999999;
+    overflow: hidden;
+    display: none;
+
+    .loading {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 70px;
+        height: 70px;
+        margin: auto;
+        border: 12px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 12px solid #01d49e;
+        animation: spin 2s linear infinite;
+    }
+    img {
+        position: absolute;
+        width: 100px;
+        top: 50%;
+        left: 50%;
+        animation-name: load;
+        animation-timing-function: linear;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+
+	span.loading-txt {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 50%;
+        bottom: 0;
+        right: 0;
+        max-width: 300px;
+        margin: auto;
+        color: #fff;
+        font-size: 18px;
+        text-align: center;
+        transform: translateY(50px);
+	}
+}
+.box-loading {
+    position: relative;
+    display: block;
+    text-align: center;
+    padding: 15px 0;
+    .fa {
+        font-size: 24px;
+    }
+}
+// End onload
+
+
+
+
+/* Popup dialog area css
+============================================================================================ */
+// wrap popup page fixed
+$url_btn_bootbox_close: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L13 13M13 1L1 13' stroke='%239B9B9B'/%3e%3c/svg%3e");
+$url_btn_bootbox_thank: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' %3e%3ccircle style='fill:%2325AE88;' cx='25' cy='25' r='25'/%3e%3cpolyline style='fill:none;stroke:%23FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;' points=' 38,15 22,33 12,25 '/%3e%3c/svg%3e");
+
+$border-title-highlight:    var(--primary-1); //color border title
+$do: #FF4848; //color do
+
+$bg-color: #bb844e; // background-color button
+
+.modal.popup-dialog {
+    .modal-dialog {
+        margin-top: 2rem;
+        @media (min-width: 576px) {
+            max-width: 600px;
+            margin-top: 4rem;
+        }
+    }
+    strong {
+    	font-family: Arial;
+    }
+    .modal-header {
+        padding: .7rem 1rem;
+        background: $bg-color;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 23px;
+        color: #FFFFFF;
+        border-radius: 0;
+        .bootbox-close-button {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			right: 0;
+			top: 0;
+			margin: 0;
+			padding: 0;
+			width: 40px;
+			height: 40px;
+			color: #bb844e;
+			background: #efc194;
+			border-radius: 0 0 0 5px;
+			border: 0;
+			box-shadow: 0 0 2px #626366;
+			outline: none;
+			font-family: auto;
+			font-weight: unset;
+			font-size: 30px;
+	        @media (min-width: 992px) {
+				width: 32px;
+				height: 32px;
+				top: -16px;
+				right: -16px;
+				background: white;
+				border-radius: 50%;
+			}
+        }
+    }
+    .modal-content {
+        background: #FFFFFF;
+        border: 0;
+        border-radius: 0px;
+        .bootbox-body {
+            padding: 20px 0 0;
+            text-align: center;
+
+            //Start - form support page payment area
+            .wrap-frm-support {
+                text-align: left;
+                .frmSupport {
+                    padding: 5px 10px 10px;
+                }
+                p {
+                    margin-bottom: 5px;
+                }
+                .control-label {
+                    margin-bottom: 15px;
+                }
+                .radio {
+                    margin-bottom: 8px;
+                    &>label {
+                        display: flex;
+                        flex-wrap: wrap;
+                        line-height: 1.3;
+                        input {
+                            margin-right: 6px;
+                            margin-top: 3px;
+                        }
+                    }
+                }
+                .textarea {
+                }
+                select,
+                input,
+                textarea {
+                    background-color: #fff;
+                    background-clip: padding-box;
+                    border: 1px solid #ced4da;
+                    border-radius: .25rem;
+                    outline: none;
+                    font-size: 14px;
+                    &:focus {
+                        border: 1px solid $border-title-highlight;
+                        box-shadow: none;
+                    }
+                }
+                textarea {
+                    width: 100%;
+                    min-height: 80px;
+                    max-height: 150px;
+                    padding: 10px 12px;
+                    resize: vertical;
+                }
+
+                &:after {
+                    position: absolute;
+                    display: block;
+                    bottom: 10px;
+                    left: 15px;
+                    content: 'Email hỗ trợ: raovat@vnexpress.net';
+                    color: #757575;
+                    font-size: 12px;
+                    font-weight: 300;
+                    font-style: italic;
+                }
+            }
+            .wrap-frm-support-thank {
+                max-width: 500px;
+                margin: 0 auto;
+                padding-top: 75px;
+                padding-bottom: 20px;
+                background-image: $url_btn_bootbox_thank;
+                background-repeat: no-repeat;
+                background-position: top 10px center;
+                background-size: 50px 50px;
+                font-size: 18px;
+            }
+            //End - form support page payment area
+
+            //Start - form information page post mannager area
+            .wrap-frm-information {
+                text-align: left;
+                font-size: 14px;
+                .frmInfo {
+                    padding: 5px 10px 10px;
+                }
+                p {
+                    margin-bottom: 5px;
+                }
+                .control-label {
+                    margin-bottom: 15px;
+                }
+                .radio {
+                    margin-bottom: 8px;
+                    &>label {
+                        display: flex;
+                        flex-wrap: wrap;
+                        line-height: 1.3;
+                        input {
+                            margin-right: 0;
+                            margin-top: 3px;
+                        }
+                    }
+                }
+                .group-txt {
+                    display: block;
+                    width: calc(100% - 50px);
+                    &>span {
+                        position: relative;
+                        display: block;
+                        width: 100%;
+                        margin-bottom: 5px;
+                    }
+                }
+                .textarea {
+                }
+                select,
+                input,
+                textarea {
+                    background-color: #fff;
+                    background-clip: padding-box;
+                    border: 1px solid #ced4da;
+                    border-radius: .25rem;
+                    outline: none;
+                    font-size: 14px;
+                    &:focus {
+                        border: 1px solid $border-title-highlight;
+                        box-shadow: none;
+                    }
+                }
+
+				input {
+					&[type='number'] {
+						appearance: auto;
+						-webkit-appearance: none;
+						-moz-appearance: textfield;
+					}
+					&::-webkit-outer-spin-button,
+					&::-webkit-inner-spin-button {
+						appearance: auto;
+						-webkit-appearance: none;
+					}
+				}
+                textarea {
+                    width: 100%;
+                    min-height: 80px;
+                    max-height: 150px;
+                    padding: 10px 12px;
+                    resize: vertical;
+                }
+
+            }
+            //End - form chayQC page post mannager area
+        }
+        .modal-footer {
+            justify-content: center;
+            border: 0;
+            padding-top: 0;
+            padding-bottom: 30px;
+            .btn-bootbox {
+                display: flex;
+                flex-direction: row;
+                padding: 4px 15px;
+                background-color: $bg-color;
+                color: #FFFFFF;
+                border-radius: 3px;
+				font-family: Arial;
+                font-weight: 600;
+                font-size: 16px;
+                outline: none;
+                box-shadow: none;
+                &.btn-xanh,
+                &.btn-yes,
+                &.btn-confirm {
+                    background-color: $bg-color;
+                }
+                &.btn-do,
+                &.btn-no,
+                &.btn-noconfirm {
+                    background-color: $do;
+                }
+                &.btn-xam,
+                &.btn-cancel {
+                    background-color: #9B9B9B;
+                }
+            }
+        }
+    }
+
+}
+/* End Popup dialog area css
+============================================================================================ */
+

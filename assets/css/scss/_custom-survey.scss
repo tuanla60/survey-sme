@@ -1,0 +1,209 @@
+#survey {
+    background-color: $bgbody;
+    padding-bottom: 50px;
+    padding-top: 46px;
+
+    @media (min-width: 768px) {
+        padding-top: 46px;
+    }
+}
+.container {
+    max-width: 1140px;
+}
+
+.survey_area {
+    background-color: $bg-survey-color;
+
+    input,
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid #E5E5E5;
+        padding: 8px;
+        font-size: 16px;
+        border-radius: 8px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        line-height: 22px;
+        height: 35px;
+    }
+
+    select {
+        display: initial;
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid #E4932C;
+        font-size: 16px;
+        border-radius: 5px;
+        color: inherit;
+        -webkit-appearance: auto;
+        -moz-appearance: auto;
+        appearance: auto;
+        padding: 8px 12px;
+        margin: 0 0 10px;
+    }
+
+    .ldp_header_area_inner {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .item {
+        background: #fff;
+        font-size: 16px;
+        padding: 15px;
+        border-radius: 16px;
+        margin: 0;
+        // box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+
+        // @media (min-width: 768px) {
+        //     border: solid 1px $border-suvery-item;
+        // }
+
+        .qes {
+            font-size: 18px;
+            font-weight: bold;
+            font-family: Arial, serif !important;
+            line-height: 1.4;
+            color: #333333;
+        }
+
+        .text-description {
+            font-style: italic;
+            font-size: 14px;
+            line-height: 1.4;
+            font-size: 300;
+            color: #757575;
+        }
+    }
+
+    .survey-wrapper {
+        padding: 0;
+
+        .survey-inner {
+            .survey-inner__content {
+                padding: 30px 0;
+                @media (min-width: 768px) {
+                    padding: 30px 20px;
+                    background-color: transparent;
+                }
+
+                .section-step {
+                    .item {
+                        margin-bottom: 30px;
+                        padding: 0 10px;
+                    }
+                }
+            }
+
+            &__buttons {
+                .tt-btn.tt-btn__primary {
+                    background-color: #001937;
+                    border: 0;
+                }
+
+                .tt-btn.tt-btn__primary:hover {
+                    filter: brightness(120%);
+                }
+            }
+        }
+    }
+}
+
+.survey-title {
+    padding: 20px 15px;
+    margin: 0 0 15px;
+    border-radius: 4px;
+    background: #fff;
+    color: rgba(34, 34, 34, 0.9);
+    font-size: 16px;
+    box-shadow: 0px 20px 26px rgba(0, 0, 0, 0.03);
+
+    p {
+
+    }
+}
+
+.wrap-bg-form {
+    padding: 20px 5px;
+    margin: 0;
+    border-radius: 4px;
+    background: #fff;
+    color: #222222;
+    font-size: 16px;
+    box-shadow: 0px 20px 26px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+}
+
+.section-survey-info {
+    color: #222222;
+    background-color: #fff;
+    padding: 20px 15px;
+    margin-top: 15px;
+    border-radius: 4px;
+
+    // @media (min-width: 768px) {
+    //     border: solid 1px $border-suvery-item;
+    // }
+
+    .survey-brand {
+        &__img {
+            max-width: 142px;
+            margin-bottom: 25px;
+        }
+    }
+
+    .survey-contact {
+        margin-top: 20px;
+
+        @media (min-width: 768px) {
+            margin-top: 0;
+        }
+
+        &__title {
+            font-size: 16px;
+            color: #222222;
+            margin-bottom: 15px;
+        }
+
+        &__content {
+            // padding: 15px;
+        }
+
+        &__description {
+            font-size: 16px;
+            color: #222222;
+        }
+
+        .item {
+            border: 0;
+            margin: 0;
+            padding: 0;
+            box-shadow: none;
+        }
+    }
+}
+
+.btn-send.events--none {
+    cursor: default !important;
+    pointer-events: none !important;
+}
+
+.note-require {
+    padding: 10px 10px 0;
+    border-top: 1px solid #E5E5E5;
+    span {
+        color: #d93025;
+    }
+}
+.item .required {
+    left: 12px;
+}
+.swal2-popup .swal2-styled.swal2-confirm {
+    background-color: #001937;
+}
