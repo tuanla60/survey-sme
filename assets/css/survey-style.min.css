@@ -12772,6 +12772,10 @@ img:not([src]) {
   text-overflow: ellipsis;
 }
 
+.w--100 {
+  width: 100%;
+}
+
 .max-w-400 {
   max-width: 400px;
 }
@@ -41843,7 +41847,7 @@ textarea:focus-visible {
   margin-top: 10px;
 }
 .survey_area .survey-wrapper .survey-inner .survey-inner__buttons .tt-btn {
-  height: 40px;
+  height: 44px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41855,7 +41859,7 @@ textarea:focus-visible {
           align-items: center;
   padding: 0 30px;
   font-size: 15px;
-  color: #fff;
+  color: #001937;
   outline: 0;
   font-weight: 700;
   margin-right: 10px;
@@ -41874,10 +41878,16 @@ textarea:focus-visible {
   margin-left: 0;
 }
 .survey_area .survey-wrapper .survey-inner .survey-inner__buttons .tt-btn.tt-btn__primary {
-  border: 1px solid #E5E5E5;
-  background-color: #001937;
+  max-width: 800px;
+  margin: auto;
+  background-color: #FFFFFF;
+  border: 1px solid #CED2E7;
+  border-radius: 4px;
 }
 .survey_area .survey-wrapper .survey-inner .survey-inner__buttons .tt-btn.tt-btn__primary:hover {
+  color: #fff;
+  background-color: #001937;
+  border-color: #001937;
   -webkit-filter: brightness(110%);
           filter: brightness(110%);
 }
